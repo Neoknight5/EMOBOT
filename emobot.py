@@ -3219,37 +3219,66 @@ async def profile(ctx):
     await ctx.send(file=discord.File(fp=buffer, filename="profile.png"))
 
 
-# wp1 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/download%20(1).jpg"
 
-# wp2 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/afbf94d44d85219a24bf99dcfc712e1c.webp"
+wp1 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/download%20(1).jpg"
 
-# wp3 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/wp3.jpg"
+wp2 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/afbf94d44d85219a24bf99dcfc712e1c.webp"
 
-# wp4 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/wp4.jpg"
+wp3 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/wp3.jpg"
 
-# wp5 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/wp5.jpg"
+wp4 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/wp4.jpg"
 
-# wp6 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/wp6.jpg"
+wp5 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/wp5.jpg"
 
-# wp7 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/wp7.jpg"
+wp6 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/wp6.jpg"
 
-# wp8 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/wp8.jpg"
+wp7 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/wp7.jpg"
 
-# wp9 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/wp9.jpg"
+wp8 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/wp8.jpg"
 
-# wp10 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/wp10.jpg"
+wp9 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/wp9.jpg"
+
+wp10 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/wp10.jpg"
 
 
-# add_wallpaper(1,"wp1",100000,wp1)
-# add_wallpaper(2,"wp2",270000,wp2)
-# add_wallpaper(3,"wp3",290000,wp3)
-# add_wallpaper(4,"wp4",300000,wp4)
-# add_wallpaper(5,"wp5",320000,wp5)
-# add_wallpaper(6,"wp6",350000,wp6)
-# add_wallpaper(7,"wp7",380000,wp7)
-# add_wallpaper(8,"wp8",400000,wp8)
-# add_wallpaper(9,"wp9",500000,wp9)
-# add_wallpaper(10,"wp10",500000,wp10)
+add_wallpaper(1,"wp1",100000,wp1)
+add_wallpaper(2,"wp2",270000,wp2)
+add_wallpaper(3,"wp3",290000,wp3)
+add_wallpaper(4,"wp4",300000,wp4)
+add_wallpaper(5,"wp5",320000,wp5)
+add_wallpaper(6,"wp6",350000,wp6)
+add_wallpaper(7,"wp7",380000,wp7)
+add_wallpaper(8,"wp8",400000,wp8)
+add_wallpaper(9,"wp9",500000,wp9)
+add_wallpaper(10,"wp10",500000,wp10)
+
+coins.add_str(1,"str1",50000,"https://media.discordapp.net/attachments/1524050865374105631/1530549415167922246/140806234859369.jpg?ex=6a786fb8&is=6a771e38&hm=53a7d6748efdbf57e5ed68b8c83069360abfaaf568d15a0f87dc4e3bfc182449&=&format=webp")
+coins.add_str(2,"str2",50000,"https://media.discordapp.net/attachments/1524050865374105631/1530553064925167786/Stickers_for_Sale.jpg?ex=6a78731e&is=6a77219e&hm=b2434671b9f9c0996b20dfdce97d78b1dda785556a44f7585d36054f786a98a9&=&format=webp")
+coins.add_str(3,"str3",70000,"https://media.discordapp.net/attachments/1524050865374105631/1530553317569200159/Halloween_stickers_for_car___Bat_Sticker.jpg?ex=6a78735b&is=6a7721db&hm=9ec060b767ae5539624dce74200efe7605ab3573cb13d007b904109c378ee8ab&=&format=webp&width=384&height=384")
+coins.add_str(4,"str4",70000,"https://media.discordapp.net/attachments/1524050865374105631/1530553569659453601/19069998418824418.jpg?ex=6a787397&is=6a772217&hm=070e6648ce519cace2997dc890da5b02b0c956362d621f3f0f14cb7e611ac080&=&format=webp&width=384&height=384")
+coins.add_str(5,"str5",90000,"https://media.discordapp.net/attachments/1524050865374105631/1530553801109667960/339881103150503412.jpg?ex=6a7873ce&is=6a77224e&hm=018681a5d3e0d355c1dd2f5e392c4ec17ac890fa2ea7341fa3564f27e2784d2f&=&format=webp&width=384&height=382")
+coins.add_str(6,"str6",50000,"https://media.discordapp.net/attachments/1524050865374105631/1530553933800538133/Ref__Logo.jpg?ex=6a7873ee&is=6a77226e&hm=36c85391b2d818af82146947317a7ca76930bdd7e64b84644ae3d0d81c9ed0b2&=&format=webp&width=384&height=384")
+coins.add_str(7,"str7",90000,"https://media.discordapp.net/attachments/1524050865374105631/1530554334599839845/Pixel_Style_Cartoon_Doctor_Hat_Graduation_Season_PNG_Free_Deduction_Picture_PNG_Images___PSD_Free_Download_-_Pikbest.jpg?ex=6a78744d&is=6a7722cd&hm=0b22cf1bb4c91c07e58cbdc94e76f9f3ba37f113af57688cf810557710a32ec1&=&format=webp")
+coins.add_str(8,"str8" ,120000,"https://media.discordapp.net/attachments/1524050865374105631/1530858204781740143/golden_trophy_cup_in_pixel_art_style.jpg?ex=6a783dcd&is=6a76ec4d&hm=e9dd8b249aa7238865e26b0d45fcc23c67cbe8f12d452a8cba788bd8aba981de&=&format=webp")
+coins.add_str(9,"str9",150000,"https://media.discordapp.net/attachments/1524050865374105631/1530860580695703592/11751649021958189.jpg?ex=6a784004&is=6a76ee84&hm=3381b14ac24a4012453b2e978e6f23258923123a3a3daa5ec0547888a07dbf3b&=&format=webp&width=360&height=640")
+coins.add_str(10,"str1",200000,"https://media.discordapp.net/attachments/1524050865374105631/1530860581324722207/88312842691864211.jpg?ex=6a784004&is=6a76ee84&hm=2b81c84bee392b084d76c0ffce3ec1158125b06f819c4a028bcb3897e05d64ed&=&format=webp")
+coins.add_str(11,"str1",230000,"https://media.discordapp.net/attachments/1524050865374105631/1530876430781780099/6e8c4e0cdbab9c8c547dbd3922bc9762.jpg?ex=6a784ec7&is=6a76fd47&hm=d710f11fb03e200a88fda50c74d89869649d4c9fd5b3432768789d54ae9f4eee&=&format=webp&width=384&height=384")
+coins.add_str(12,"str1",270000,"https://images-ext-1.discordapp.net/external/6vbffcdn6kBPbYBSuWuwqX04JwP-KyztZSHgoGIc5x4/https/i.pinimg.com/736x/1e/83/1b/1e831b5e193ff13410668fd503e1f34a.jpg?format=webp")
+coins.add_str(13,"str1",350000,"https://media.discordapp.net/attachments/1524050865374105631/1531583757948293130/d22f0d29f2b1fc11f23df242d712bcf1.png?ex=6a783e87&is=6a76ed07&hm=e103f83153adaf47993c47014627070065a3c53263570d233f4d88c5d58b5984&=&format=webp&quality=lossless&width=640&height=640")
+coins.add_str(14,"str1",350000,"https://images-ext-1.discordapp.net/external/gGjZak8o5Z5Dx32M1vu5UNYqKm1T5nOvCCt9X-p5Sfw/https/i.pinimg.com/736x/17/fc/c1/17fcc142d217aeaff52a47910f0e8f7e.jpg?format=webp")
+coins.add_str(15,"str15",300000,"https://media.discordapp.net/attachments/1524050865374105631/1531629219719807047/Aaa.jpg?ex=6a7868de&is=6a77175e&hm=8990cd04ba6b8bc1be7de9b4a72a592aa6aef428e5f2e3a531a29a30286dea48&=&format=webp")
+
+coins.add_wp(1,"wp1",100000,"https://media.discordapp.net/attachments/1487389986960707698/1531643411206242465/image.png?ex=6a791ed5&is=6a77cd55&hm=47538aef0098bd47a195d23340f67ff672934bfaf87ff06bc55c6f5f4508caf7&=&format=webp&quality=lossless")
+coins.add_wp(2,"wp2",270000,"https://images-ext-1.discordapp.net/external/GQRbkcOLgXWCaMLvonQTAqHGBWPITUkCje70zv4DoSU/%3Fformat%3Dwebp%26width%3D892%26height%3D615/https/images-ext-1.discordapp.net/external/1c1Y3vfTehzyRcinDcDX1gpmd0NSRbEBOGVxGs2oZd4/https/i.pinimg.com/1200x/af/bf/94/afbf94d44d85219a24bf99dcfc712e1c.jpg?format=webp&width=512&height=352")
+coins.add_wp(3,"wp3",290000,"https://cdn.discordapp.com/attachments/1487389986960707698/1531644179661328574/image.png?ex=6a791f8d&is=6a77ce0d&hm=4f46873aad9cfe011e4b015996be4ea34c8e265ed1aacd7b6123e3877a8c4e76")
+coins.add_wp(4,"wp4",300000,"https://media.discordapp.net/attachments/1487389986960707698/1531644354974978088/image.png?ex=6a791fb6&is=6a77ce36&hm=18594c1996ed60f472558a3a03faadbcca981f9e6337466bcfc8faf038464112&=&format=webp&quality=lossless")
+coins.add_wp(5,"wp5",320000,"https://media.discordapp.net/attachments/1486407954193322117/1531976354956836966/9e23f0e8bacb5f03ad6418a3bdd1727b.jpg?ex=6a790369&is=6a77b1e9&hm=20c1b87c86186cdd944cdb70eaa4262d80a6ee7715cea4a6b50568fee804f44c&=&format=webp")
+coins.add_wp(6,"wp6",350000,"https://cdn.discordapp.com/attachments/1487389986960707698/1531644471865770165/image.png?ex=6a791fd2&is=6a77ce52&hm=b3e0dd09c2222c9b79f009042c124520256bceadc405568b07bee2227abb6b7a")
+coins.add_wp(7,"wp7",380000,"https://media.discordapp.net/attachments/1487389986960707698/1531644829941891102/image.png?ex=6a792028&is=6a77cea8&hm=3a10acadb58904802d59015d272b7f81784000b4747628d2ed3fd84940b31d55&=&format=webp&quality=lossless")
+coins.add_wp(8,"wp8",400000,"https://images-ext-1.discordapp.net/external/xP1lT_LiwX4Dm0CHUtYHLrroRgU7lJaKfB3injkJr8Y/https/i.pinimg.com/736x/53/00/2d/53002d9b5528fd7222559fabc3ec6df2.jpg?format=webp")
+coins.add_wp(9,"wp9",500000,'https://images-ext-1.discordapp.net/external/FVqDK21D-BY0HXSHc6K18zqaYZpNZA-XY-QW77O1Cts/%3Fformat%3Dwebp%26width%3D670%26height%3D670/https/images-ext-1.discordapp.net/external/HxQ4lpc8T4dDL3IPgXUAbdYBGtoSHIaSpFTh-0msGb8/https/i.pinimg.com/1200x/e6/69/f0/e669f00b00074f018aba135e80e0ab26.jpg?format=webp')
+coins.add_wp(10,"wp10",500000,"https://images-ext-1.discordapp.net/external/VEhJeGwc81mNKteuQJo0USjsGV73f7633RAiURCser0/https/i.pinimg.com/736x/ec/af/19/ecaf19707ef5b6cdb25427eb6e8fdb7a.jpg?format=webp")
+
 
 
 
