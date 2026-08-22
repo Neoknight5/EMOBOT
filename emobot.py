@@ -3156,7 +3156,7 @@ async def profile(ctx):
     coin = data["coins"]
     xp = data["xp"]
 
-    canvas_size = Image.open("default_profile.png").size
+    canvas_size = Image.open("default_profile.png.jpg").size
     profile_img = None
 
     equipped = get_equipped_wallpaper(user_id)
