@@ -4,8 +4,8 @@ from discord import ui
 import datetime
 from datetime import datetime,timedelta
 import random
-import claude_come
-from claude_come import coins
+import database
+from database import coins
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 import requests
