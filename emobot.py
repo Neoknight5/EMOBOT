@@ -13,6 +13,7 @@ import time
 import asyncio
 
 
+
 class embed(discord.Embed):
     def __init__(self, title: str = "", description: str = "", color=None, url: str = None, timestamp: datetime = None):
         super().__init__(
@@ -3155,6 +3156,7 @@ async def profile(ctx):
     data = coins.get_user(user_id)
     coin = data["coins"]
     xp = data["xp"]
+    
 
     canvas_size = Image.open("default_profile.png.jpg").size
     profile_img = None
@@ -3177,7 +3179,7 @@ async def profile(ctx):
         equip_wallpaper(user_id, 0)
 
     if profile_img is None:
-        profile_img = Image.open("default_profile.png").convert("RGBA")
+        profile_img = Image.open("default_profile.png.png").convert("RGBA")
 
     profile_img = profile_img.resize(canvas_size)
     draw = ImageDraw.Draw(profile_img)
