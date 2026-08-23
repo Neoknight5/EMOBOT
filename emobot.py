@@ -3156,7 +3156,9 @@ async def profile(ctx):
     data = coins.get_user(user_id)
     coin = data["coins"]
     xp = data["xp"]
+    import os
 
+    print("Exists:", os.path.exists("default_profile.png.jpg"))
     canvas_size = Image.open("default_profile.png.jpg").size
     profile_img = None
 
