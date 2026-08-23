@@ -2603,8 +2603,8 @@ async def debug(ctx):
     )
 
     embed.add_field(
-        name="📩 Contact Developer",
-        value="[Click here to DM the developer]\nhttps://discord.gg/NpYabKPd",
+        name="📩 Contact Developer SERVER",
+        value="https://discord.gg/Bhw3VTcbJ",
         inline=False
     )
 
@@ -2664,7 +2664,7 @@ async def fb(ctx):
 
     embed.add_field(
         name="🌐 Support Server",
-        value="[Join Here]\nhttps://discord.gg/wGxVswvEK",
+        value="[Join Here]\n https://discord.gg/wGxVswvEK",
         inline=False
     )
 
@@ -2716,8 +2716,8 @@ async def dev(ctx):
     )
 
     embed.add_field(
-        name="📩 Contact Me",
-        value="[DM Me Here]\nhttps://discord.gg/NpYabKPd",
+        name="📩 Contact Me on SERVER ",
+        value="[DM Me Here]\n https://discord.gg/Bhw3VTcbJ",
         inline=False
     )
 
