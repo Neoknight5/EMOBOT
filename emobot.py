@@ -3176,7 +3176,6 @@ async def profile(ctx):
                 f"(id={equipped['wallpaper_id']}) failed to load from "
                 f"url={equipped['url']!r}"
             )
-    print("__5")
     elif get_profile(user_id)["equipped_wallpaper_id"]:
         stale_id = get_profile(user_id)["equipped_wallpaper_id"]
         print(f"[profile] user {user_id}'s equipped wallpaper (id={stale_id}) "
