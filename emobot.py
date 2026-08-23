@@ -3161,7 +3161,7 @@ async def profile(ctx):
     print(os.getcwd())
     print(os.listdir("."))
     print("__1")
-    img = Image.open("./default_profile.png.jpg")
+    img = Image.open("default_profile.png.jpg")
     print("___2")
     canvas_size = Image.open("default_profile.png.jpg").size
     profile_img = None
