@@ -2560,7 +2560,7 @@ async def rate(ctx,member:discord.Member=None):
             text = ["noice","very good","you are best","someone had crush on you ","cutie","pro"]
         elif num >= 90 :
             text = ["legends are here","very very good","hacker","you are best","everone had crush on you","sweety"]
-        await ctx.send(f"- 🙂 - this is computer's choice don't feel bad if result are bad\n📊 {member.display_name} is {num}% {random.choice(text)}")
+        await ctx.send(f"- 🙂 - this is computer's choice don't feel bad if result are bad\n📊 {ctx.author.display_name} is {num}% {random.choice(text)}")
     else :
         num = random.randint(30,100)
         text = ""
@@ -2570,7 +2570,7 @@ async def rate(ctx,member:discord.Member=None):
             text = ["noice","very good","you are best","someone had crush on you ","cutie","pro"]
         elif num >= 90 :
             text = ["legends are here","very very good","hacker","you are best","everone had crush on you","sweety"]
-        await ctx.send(f"- 🙂 - this is computer's choice don't feel bad if result are bad\n📊 {ctx.author.display_name} is {num}% {random.choice(text)}")      
+        await ctx.send(f"- 🙂 - this is computer's choice don't feel bad if result are bad\n📊 {member.display_name} is {num}% {random.choice(text)}")      
 @bot.command(name="choice")
 async def choice(ctx, val: str, val2: str):
 
