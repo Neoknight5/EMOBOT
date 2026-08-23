@@ -3193,9 +3193,16 @@ async def profile(ctx):
         avatar = avatar.resize((220, 220))
         profile_img.paste(avatar, (50, 50), avatar)
 
+    
+
     # ---------------- text ----------------
-    font = ImageFont.truetype("arial.ttf", 30)
-    big_font = ImageFont.truetype("arial.ttf", 70)
+    try:
+        font = ImageFont.truetype("arial.ttf", 30)
+        big_font = ImageFont.truetype("arial.ttf", 70)
+    except Exception as e:
+        print("FONT ERROR:", e)
+        font = ImageFont.load_default()
+        big_font = ImageFont.load_default()
     username = ctx.author.display_name
 
     draw.text((320, 60), username, font=big_font, fill="#3B1E7F")
