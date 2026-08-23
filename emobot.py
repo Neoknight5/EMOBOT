@@ -3197,8 +3197,8 @@ async def profile(ctx):
 
     # ---------------- text ----------------
     try:
-        font = ImageFont.truetype("arial.ttf", 30)
-        big_font = ImageFont.truetype("arial.ttf", 70)
+        font = ImageFont.truetype("RobotoCondensed-Regular.ttf", 30)
+        big_font = ImageFont.truetype("RobotoCondensed-Regular.ttf", 70)
     except Exception as e:
         print("FONT ERROR:", e)
         font = ImageFont.load_default()
