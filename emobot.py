@@ -13,7 +13,6 @@ import time
 import asyncio
 
 
-
 class embed(discord.Embed):
     def __init__(self, title: str = "", description: str = "", color=None, url: str = None, timestamp: datetime = None):
         super().__init__(
@@ -162,14 +161,13 @@ async def balance(ctx,message=None):
     except TypeError :
         await ctx.reply("😢you didnt have an acccount first use ```e start``` command to make it!")
 
-
 #___________coinflip_____________________
 @bot.command(name="coinsflip",aliases=["cf"])
-async def coinflip(ctx,nam:int,message=None):
+async def coinflip(ctx,nam:int=None,message=None):
     name = ctx.author.id
     if message not in ["heads","tells"]:
         await ctx.reply("🙄i dont know about your choice choose between heads/tells commands is   ```e coinflip amount heads||tells```")
-    elif nam == None or nam == str :
+    elif nam is None:
         await ctx.reply(f"🙄please enter your amount ```e coinflip amount heads||tells```")
     else :
         user_id = ctx.author.id
@@ -177,6 +175,7 @@ async def coinflip(ctx,nam:int,message=None):
             await ctx.reply("😢First create an account using `e start`.")
             return
         data = coins.get_user(user_id)
+        fu = data[1]
         if data[1] < 0 :
             fu = abs(data[1])
             coins.update_coins(name,fu)
@@ -184,7 +183,6 @@ async def coinflip(ctx,nam:int,message=None):
             await ctx.reply("🥺you don't have enough coins 🪙 earn more coins for it 💰")
             return
         else:
-            # data = (id, coins, xp, str, lt_work
             heads_url = "https://cdn.discordapp.com/attachments/1524050709228687460/1530940736999264448/Pixel_art_game_currency_coin.jpg?ex=6a67672b&is=6a6615ab&hm=1264132aad0259350b8a5cebebf59eea58df616256843b10fb3f4beca45bae50"
             tells_url = "https://cdn.discordapp.com/attachments/1524050709228687460/1530940761187815465/gold.jpg?ex=6a676730&is=6a6615b0&hm=ec9f1e32214d3e807e62f77adbe0c2f7e98ddedb611888011e34c956ecc09769"
             val = ["heads","tells"]
@@ -214,8 +212,15 @@ async def coinflip(ctx,nam:int,message=None):
                 await ctx.reply(embed=embed)
             else:
                 if nam == fu:
-                    reward = 0
-                    coins.update_coins(user_id,reward)
+                    reward = fu
+                    coins.update_coins(user_id,0)
+                    embed = discord.Embed(
+                        title="you loss 🥺",
+                        description=f"**{cf}** || you loss ***{reward}*** coins try again 🤠",
+                        color=discord.Color.green()
+                    )
+                    embed.set_thumbnail(url=heads_url if cf == "heads" else tells_url)
+                    await ctx.reply(embed=embed)
                 else :
                     reward = nam + nam
                     new_balance = fu - reward
@@ -236,7 +241,6 @@ async def coinflip(ctx,nam:int,message=None):
             )
                         embed.set_thumbnail(url=heads_url)
                         await ctx.reply(embed=embed)
-
 #________________FLEX COMMAND_______________________0_
 @bot.command(name="flex",aliases=["show"])
 async def flex(ctx,nam:int):
@@ -3156,26 +3160,11 @@ async def profile(ctx):
     data = coins.get_user(user_id)
     coin = data["coins"]
     xp = data["xp"]
-    import os
 
-    print(os.getcwd())
-    print(os.listdir("."))
-    print("__1")
-    try:
-        img = Image.open("default_profile.png.jpg")
-        print("IMAGE OPENED SUCCESSFULLY")
-    except Exception as e:
-        print("IMAGE OPEN ERROR:", repr(e))
-    print("___2")
-    try:
-        canvas_size = Image.open("default_profile.png.jpg").size
-        print("CANVAS OK")
-    except Exception as e:
-        print("CANVAS ERROR:", repr(e))
+    canvas_size = Image.open("default_profile.png").size
     profile_img = None
-    print("___3")
+
     equipped = get_equipped_wallpaper(user_id)
-    print("__4")
     if equipped is not None:
         profile_img = _download_image(equipped["url"])
         if profile_img is None:
@@ -3185,22 +3174,26 @@ async def profile(ctx):
                 f"url={equipped['url']!r}"
             )
     elif get_profile(user_id)["equipped_wallpaper_id"]:
+        # equipped id is set but points at a wallpaper no longer in the
+        # shop — self-heal so this doesn't repeat every profile call
         stale_id = get_profile(user_id)["equipped_wallpaper_id"]
         print(f"[profile] user {user_id}'s equipped wallpaper (id={stale_id}) "
               "no longer exists — resetting")
         equip_wallpaper(user_id, 0)
-    print("___6")
+
     if profile_img is None:
-        profile_img = Image.open("default_profile.png.jpg").convert("RGBA")
+        profile_img = Image.open("default_profile.png").convert("RGBA")
 
     profile_img = profile_img.resize(canvas_size)
     draw = ImageDraw.Draw(profile_img)
 
+    # ---------------- avatar ----------------
     avatar = _download_image(ctx.author.display_avatar.url)
     if avatar is not None:
         avatar = avatar.resize((220, 220))
         profile_img.paste(avatar, (50, 50), avatar)
 
+    # ---------------- text ----------------
     font = ImageFont.truetype("arial.ttf", 30)
     big_font = ImageFont.truetype("arial.ttf", 70)
     username = ctx.author.display_name
@@ -3210,6 +3203,7 @@ async def profile(ctx):
     draw.text((320, 200), f"{xp} XP", font=font, fill="white")
     draw.text((100,480),"AN POOKIE >.< user of EMO bot ",font=font,fill="#3B1E7F")
 
+    # ---------------- xp bar ----------------
     max_xp = 1000
     progress = min(xp / max_xp, 1)
 
@@ -3223,10 +3217,12 @@ async def profile(ctx):
     draw.rounded_rectangle((bar_x1, bar_y1, bar_x2, bar_y2), radius=10, outline="white", width=2)
     draw.text((bar_x1 + 90, bar_y1 - 30), f"{xp}/{max_xp} XP", font=font, fill="#304655")
 
+    # ---------------- send ----------------
     buffer = BytesIO()
     profile_img.save(buffer, format="PNG")
     buffer.seek(0)
     await ctx.send(file=discord.File(fp=buffer, filename="profile.png"))
+
 
 wp1 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/download%20(1).jpg"
 
@@ -3286,7 +3282,6 @@ coins.add_wp(7,"wp7",380000,"https://media.discordapp.net/attachments/1487389986
 coins.add_wp(8,"wp8",400000,"https://images-ext-1.discordapp.net/external/xP1lT_LiwX4Dm0CHUtYHLrroRgU7lJaKfB3injkJr8Y/https/i.pinimg.com/736x/53/00/2d/53002d9b5528fd7222559fabc3ec6df2.jpg?format=webp")
 coins.add_wp(9,"wp9",500000,'https://images-ext-1.discordapp.net/external/FVqDK21D-BY0HXSHc6K18zqaYZpNZA-XY-QW77O1Cts/%3Fformat%3Dwebp%26width%3D670%26height%3D670/https/images-ext-1.discordapp.net/external/HxQ4lpc8T4dDL3IPgXUAbdYBGtoSHIaSpFTh-0msGb8/https/i.pinimg.com/1200x/e6/69/f0/e669f00b00074f018aba135e80e0ab26.jpg?format=webp')
 coins.add_wp(10,"wp10",500000,"https://images-ext-1.discordapp.net/external/VEhJeGwc81mNKteuQJo0USjsGV73f7633RAiURCser0/https/i.pinimg.com/736x/ec/af/19/ecaf19707ef5b6cdb25427eb6e8fdb7a.jpg?format=webp")
-
 
 
 
