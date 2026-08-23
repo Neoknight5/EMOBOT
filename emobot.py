@@ -3161,9 +3161,17 @@ async def profile(ctx):
     print(os.getcwd())
     print(os.listdir("."))
     print("__1")
-    img = Image.open("default_profile.png.jpg")
+    try:
+        img = Image.open("default_profile.png.jpg")
+        print("IMAGE OPENED SUCCESSFULLY")
+    except Exception as e:
+        print("IMAGE OPEN ERROR:", repr(e))
     print("___2")
-    canvas_size = Image.open("default_profile.png.jpg").size
+    try:
+        canvas_size = Image.open("default_profile.png.jpg").size
+        print("CANVAS OK")
+    except Exception as e:
+        print("CANVAS ERROR:", repr(e))
     profile_img = None
     print("___3")
     equipped = get_equipped_wallpaper(user_id)
