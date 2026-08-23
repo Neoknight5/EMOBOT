@@ -3160,12 +3160,14 @@ async def profile(ctx):
 
     print(os.getcwd())
     print(os.listdir("."))
-
+    print("__1")
     img = Image.open("./default_profile.png.jpg")
+    print("___2")
     canvas_size = Image.open("default_profile.png.jpg").size
     profile_img = None
-
+    print("___3")
     equipped = get_equipped_wallpaper(user_id)
+    print("__4")
     if equipped is not None:
         profile_img = _download_image(equipped["url"])
         if profile_img is None:
@@ -3174,12 +3176,13 @@ async def profile(ctx):
                 f"(id={equipped['wallpaper_id']}) failed to load from "
                 f"url={equipped['url']!r}"
             )
+    print("__5")
     elif get_profile(user_id)["equipped_wallpaper_id"]:
         stale_id = get_profile(user_id)["equipped_wallpaper_id"]
         print(f"[profile] user {user_id}'s equipped wallpaper (id={stale_id}) "
               "no longer exists — resetting")
         equip_wallpaper(user_id, 0)
-
+    print("___6")
     if profile_img is None:
         profile_img = Image.open("default_profile.png.jpg").convert("RGBA")
 
