@@ -3156,7 +3156,6 @@ async def profile(ctx):
     data = coins.get_user(user_id)
     coin = data["coins"]
     xp = data["xp"]
-    
 
     canvas_size = Image.open("default_profile.png.jpg").size
     profile_img = None
@@ -3171,26 +3170,22 @@ async def profile(ctx):
                 f"url={equipped['url']!r}"
             )
     elif get_profile(user_id)["equipped_wallpaper_id"]:
-        # equipped id is set but points at a wallpaper no longer in the
-        # shop — self-heal so this doesn't repeat every profile call
         stale_id = get_profile(user_id)["equipped_wallpaper_id"]
         print(f"[profile] user {user_id}'s equipped wallpaper (id={stale_id}) "
               "no longer exists — resetting")
         equip_wallpaper(user_id, 0)
 
     if profile_img is None:
-        profile_img = Image.open("default_profile.png.png").convert("RGBA")
+        profile_img = Image.open("default_profile.png.jpg").convert("RGBA")
 
     profile_img = profile_img.resize(canvas_size)
     draw = ImageDraw.Draw(profile_img)
 
-    # ---------------- avatar ----------------
     avatar = _download_image(ctx.author.display_avatar.url)
     if avatar is not None:
         avatar = avatar.resize((220, 220))
         profile_img.paste(avatar, (50, 50), avatar)
 
-    # ---------------- text ----------------
     font = ImageFont.truetype("arial.ttf", 30)
     big_font = ImageFont.truetype("arial.ttf", 70)
     username = ctx.author.display_name
@@ -3200,7 +3195,6 @@ async def profile(ctx):
     draw.text((320, 200), f"{xp} XP", font=font, fill="white")
     draw.text((100,480),"AN POOKIE >.< user of EMO bot ",font=font,fill="#3B1E7F")
 
-    # ---------------- xp bar ----------------
     max_xp = 1000
     progress = min(xp / max_xp, 1)
 
@@ -3214,13 +3208,10 @@ async def profile(ctx):
     draw.rounded_rectangle((bar_x1, bar_y1, bar_x2, bar_y2), radius=10, outline="white", width=2)
     draw.text((bar_x1 + 90, bar_y1 - 30), f"{xp}/{max_xp} XP", font=font, fill="#304655")
 
-    # ---------------- send ----------------
     buffer = BytesIO()
     profile_img.save(buffer, format="PNG")
     buffer.seek(0)
     await ctx.send(file=discord.File(fp=buffer, filename="profile.png"))
-
-
 
 wp1 = "https://raw.githubusercontent.com/Neoknight5/EMO-WALLPAPER-URL/main/download%20(1).jpg"
 
