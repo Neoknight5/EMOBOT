@@ -2372,7 +2372,7 @@ async def cuteness(ctx,member:discord.Member=None):
             text = "so cute 😍"
         elif num >= 90 :
             text = "cutest 😍🌹🥰😘"
-        await ctx.send(f"- 🙂 - this is computer's choice don't feel bad if result are bad\n📊 {member.display_name} is {num}% {text} 🌸")
+        await ctx.send(f"- 🙂 - this is computer's choice don't feel bad if result are bad\n📊 {ctx.author.display_name} is {num}% {text} 🌸")
     else :
         num = random.randint(30,100)
         text = ""
@@ -2382,17 +2382,17 @@ async def cuteness(ctx,member:discord.Member=None):
             text = "so cute 😍"
         elif num >= 90 :
             text = "cutest 😍🌹🥰😘"
-        await ctx.send(f"- 🙂 - this is computer's choice don't feel bad if result are bad\n📊 {ctx.author.display_name} is {num}% {text} 🌸")
+        await ctx.send(f"- 🙂 - this is computer's choice don't feel bad if result are bad\n📊 {member.display_name} is {num}% {text} 🌸")
 
 
 @bot.command()
 async def luck(ctx,member:discord.Member=None):
     if member != None :
         num = random.randint(30,100)
-        await ctx.send(f"- 🙂 - this is computer's choice don't feel sad if result are bad\n📊 {member.display_name} is {num}% lucky 🍀")
+        await ctx.send(f"- 🙂 - this is computer's choice don't feel sad if result are bad\n📊 {ctx.author.display_name} is {num}% lucky 🍀")
     else :
         num = random.randint(30,100)
-        await ctx.send(f"- 🙂 - this is computer's choice don't feel sad if result are bad\n📊 {ctx.author.display_name} is {num}% lucky 🍀")        
+        await ctx.send(f"- 🙂 - this is computer's choice don't feel sad if result are bad\n📊 {member.display_name} is {num}% lucky 🍀")        
 
 @bot.command()
 async def nickname(ctx):
