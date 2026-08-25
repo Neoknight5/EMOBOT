@@ -2365,7 +2365,7 @@ async def something(ctx):
 async def cuteness(ctx,member:discord.Member=None):
     if member != None :
         num = random.randint(30,100)
-        text = ""
+        text = ">.<"
         if num <= 50 :
             text = "cute 😳"
         elif num >= 75 :
@@ -2375,7 +2375,7 @@ async def cuteness(ctx,member:discord.Member=None):
         await ctx.send(f"- 🙂 - this is computer's choice don't feel bad if result are bad\n📊 {ctx.author.display_name} is {num}% {text} 🌸")
     else :
         num = random.randint(30,100)
-        text = ""
+        text = ">.<"
         if num <= 50 :
             text = "cute 😳"
         elif num >= 75 :
