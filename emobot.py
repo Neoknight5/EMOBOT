@@ -2553,7 +2553,7 @@ async def compliment(ctx):
 async def rate(ctx,member:discord.Member=None):
     if member == None :
         num = random.randint(30,100)
-        text = ""
+        text = "no words"
         if num <= 50 :
             text = ["ok -ok","normal","fine","aah","its ok still i like you"]
         elif num >= 75 :
