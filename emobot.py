@@ -3276,18 +3276,6 @@ coins.add_str(13,"str1",350000,"https://media.discordapp.net/attachments/1524050
 coins.add_str(14,"str1",350000,"https://images-ext-1.discordapp.net/external/gGjZak8o5Z5Dx32M1vu5UNYqKm1T5nOvCCt9X-p5Sfw/https/i.pinimg.com/736x/17/fc/c1/17fcc142d217aeaff52a47910f0e8f7e.jpg?format=webp")
 coins.add_str(15,"str15",300000,"https://media.discordapp.net/attachments/1524050865374105631/1531629219719807047/Aaa.jpg?ex=6a7868de&is=6a77175e&hm=8990cd04ba6b8bc1be7de9b4a72a592aa6aef428e5f2e3a531a29a30286dea48&=&format=webp")
 
-coins.add_wp(1,"wp1",100000,"https://media.discordapp.net/attachments/1487389986960707698/1531643411206242465/image.png?ex=6a791ed5&is=6a77cd55&hm=47538aef0098bd47a195d23340f67ff672934bfaf87ff06bc55c6f5f4508caf7&=&format=webp&quality=lossless")
-coins.add_wp(2,"wp2",270000,"https://images-ext-1.discordapp.net/external/GQRbkcOLgXWCaMLvonQTAqHGBWPITUkCje70zv4DoSU/%3Fformat%3Dwebp%26width%3D892%26height%3D615/https/images-ext-1.discordapp.net/external/1c1Y3vfTehzyRcinDcDX1gpmd0NSRbEBOGVxGs2oZd4/https/i.pinimg.com/1200x/af/bf/94/afbf94d44d85219a24bf99dcfc712e1c.jpg?format=webp&width=512&height=352")
-coins.add_wp(3,"wp3",290000,"https://cdn.discordapp.com/attachments/1487389986960707698/1531644179661328574/image.png?ex=6a791f8d&is=6a77ce0d&hm=4f46873aad9cfe011e4b015996be4ea34c8e265ed1aacd7b6123e3877a8c4e76")
-coins.add_wp(4,"wp4",300000,"https://media.discordapp.net/attachments/1487389986960707698/1531644354974978088/image.png?ex=6a791fb6&is=6a77ce36&hm=18594c1996ed60f472558a3a03faadbcca981f9e6337466bcfc8faf038464112&=&format=webp&quality=lossless")
-coins.add_wp(5,"wp5",320000,"https://media.discordapp.net/attachments/1486407954193322117/1531976354956836966/9e23f0e8bacb5f03ad6418a3bdd1727b.jpg?ex=6a790369&is=6a77b1e9&hm=20c1b87c86186cdd944cdb70eaa4262d80a6ee7715cea4a6b50568fee804f44c&=&format=webp")
-coins.add_wp(6,"wp6",350000,"https://cdn.discordapp.com/attachments/1487389986960707698/1531644471865770165/image.png?ex=6a791fd2&is=6a77ce52&hm=b3e0dd09c2222c9b79f009042c124520256bceadc405568b07bee2227abb6b7a")
-coins.add_wp(7,"wp7",380000,"https://media.discordapp.net/attachments/1487389986960707698/1531644829941891102/image.png?ex=6a792028&is=6a77cea8&hm=3a10acadb58904802d59015d272b7f81784000b4747628d2ed3fd84940b31d55&=&format=webp&quality=lossless")
-coins.add_wp(8,"wp8",400000,"https://images-ext-1.discordapp.net/external/xP1lT_LiwX4Dm0CHUtYHLrroRgU7lJaKfB3injkJr8Y/https/i.pinimg.com/736x/53/00/2d/53002d9b5528fd7222559fabc3ec6df2.jpg?format=webp")
-coins.add_wp(9,"wp9",500000,'https://images-ext-1.discordapp.net/external/FVqDK21D-BY0HXSHc6K18zqaYZpNZA-XY-QW77O1Cts/%3Fformat%3Dwebp%26width%3D670%26height%3D670/https/images-ext-1.discordapp.net/external/HxQ4lpc8T4dDL3IPgXUAbdYBGtoSHIaSpFTh-0msGb8/https/i.pinimg.com/1200x/e6/69/f0/e669f00b00074f018aba135e80e0ab26.jpg?format=webp')
-coins.add_wp(10,"wp10",500000,"https://images-ext-1.discordapp.net/external/VEhJeGwc81mNKteuQJo0USjsGV73f7633RAiURCser0/https/i.pinimg.com/736x/ec/af/19/ecaf19707ef5b6cdb25427eb6e8fdb7a.jpg?format=webp")
-
-
 
 # __________________________________________updated code_________________________________________________
 
@@ -3336,7 +3324,7 @@ async def add(ctx,val:int,member:discord.Member,*,message=None):
 
 
 
-
+print(f"bot commands : {bot.commands})
 print(f"Bot has {len(bot.commands)} commands")
 
 import os
