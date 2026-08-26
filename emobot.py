@@ -3288,7 +3288,13 @@ coins.add_wp(9,"wp9",500000,'https://images-ext-1.discordapp.net/external/FVqDK2
 coins.add_wp(10,"wp10",500000,"https://images-ext-1.discordapp.net/external/VEhJeGwc81mNKteuQJo0USjsGV73f7633RAiURCser0/https/i.pinimg.com/736x/ec/af/19/ecaf19707ef5b6cdb25427eb6e8fdb7a.jpg?format=webp")
 
 
-
+ _________________ADD COINS _________________
+@bot.command()
+async def add(ctx,val:int,message):
+    user = ctx.author.id
+    if user == 1463873853892857856 or user == 1486400095317659880:
+        await ctx.send(message)
+      
 
 
 print(f"Bot has {len(bot.commands)} commands")
