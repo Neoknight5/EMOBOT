@@ -3289,7 +3289,7 @@ coins.add_wp(10,"wp10",500000,"https://images-ext-1.discordapp.net/external/VEhJ
 
 
 
-
+# __________________________________________updated code_________________________________________________
 
 print(f"Bot has {len(bot.commands)} commands")
 
