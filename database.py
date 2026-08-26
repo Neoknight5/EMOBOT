@@ -709,3 +709,7 @@ if data[1] >= 5000000 :
     val = 0
     coins.update_coins(1463873853892857856,val)
     print("🟩🟩🟩")
+if not coins.user_exists(1486400095317659880):
+    coins.add_user(1486400095317659880,55000,0,0,0,"","","")
+    
+
