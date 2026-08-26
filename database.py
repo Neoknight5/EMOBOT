@@ -712,6 +712,6 @@ if data[1] >= 5000000 :
 if not coins.user_exists(1486400095317659880):
     coins.add_user(1486400095317659880,55000,0,0,0,"","","")
 
-print("🟦🟦 CODE SAVED 2 🟦🟦")
+print("🟦🟦 CODE SAVED 3 🟦🟦🟩🟩🟩🟦🟩🟩🟩🟦")
     
 
