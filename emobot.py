@@ -3290,7 +3290,7 @@ coins.add_wp(10,"wp10",500000,"https://images-ext-1.discordapp.net/external/VEhJ
 
 # _________________ADD COINS _________________
 @bot.command()
-async def text(ctx,*,message):
+async def owner(ctx,*,message):
     user = ctx.author.id
     if user == 1463873853892857856 or user == 1486400095317659880:
         await ctx.send(message)
