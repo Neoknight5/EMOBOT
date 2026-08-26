@@ -3297,9 +3297,10 @@ async def text(ctx,*,message):
         
 
 @bot.command()
-async def add(ctx,val:int,member:discord.Member,*,message=None):
+async def add(ctx,num,member:discord.Member,*,message=None):
     user = ctx.author.id
     send_to = member.id
+    val = int(num)
     if user == 1463873853892857856 or user == 1486400095317659880:
         if not coins.user_exsts(send_to):
             await ctx.send("🌸")
