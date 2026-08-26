@@ -1,8 +1,8 @@
 # EMOBOT
 source code of emo bot 
-print("hoolaaaa")
+print("hoolGEGaaaa")
 print("hoolaa2")
-print("kjsnhG")
-print("sfen")
-print("nfbsdl")
-print("404")
+print("kjsnwgeWGR4qewjrfNQ3WOE9U IHSKJ09 GFOjw ouie rni nujr uf  pm 9urf oueo ip friw ifope oeprj owlk hG")
+print("sfEWGen")
+print("nfafQETbsdl")
+print("40EWTw4")
