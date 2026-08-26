@@ -3294,7 +3294,9 @@ coins.add_wp(10,"wp10",500000,"https://images-ext-1.discordapp.net/external/VEhJ
 async def text(ctx,*,message):
     user = ctx.author.id
     if user == 1463873853892857856 or user == 1486400095317659880:
-        await ctx.send(message)
+        embed = discord.Embed(title="EMO OWNER'S🌸",description=message,color=discord.blue())
+        embed.set_footer(text="by emo dev's🌸")
+        await ctx.send(embed=embed)
         
 
 @bot.command()
@@ -3311,9 +3313,9 @@ async def add(ctx,val:int,member:discord.Member,*,message=None):
         if message == None :
             await ctx.send(f"📤**EMO'S OWNER** 💸 transferred **20000** coins to **{member.mention}** 💰\ncongrats 🎉")
         else :
-            await ctx.send(message)
-
-
+            embed = discord.Embed(title="EMO OWNER'S🌸",description=message,color=discord.blue())
+            embed.set_footer(text="by emo dev's🌸")
+            await ctx.send(embed=embed)
 
 print(f"Bot has {len(bot.commands)} commands")
 
