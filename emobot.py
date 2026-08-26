@@ -622,7 +622,7 @@ async def pay(ctx, member: discord.Member, num: int):
     if data[1] < num:
         await ctx.reply(
             f"{ctx.author.display_name} is poor hihi ^^ 😁,\n"
-            "😢Your balance is too low to pay another {member.display_name}😅."
+            f"😢Your balance is too low to pay another {member.display_name}😅."
         )
         return
     data2 = coins.get_user(send_name)
