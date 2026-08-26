@@ -3292,7 +3292,7 @@ async def text(ctx, *, message):
             embed = discord.Embed(
                 title="EMO OWNER'S🌸",
                 description=message,
-                color=discord.Color.blue()
+                Color=discord.Color.blue()
             )
 
             embed.set_footer(text="by emo dev's🌸")
@@ -3318,13 +3318,13 @@ async def add(ctx,val:int,member:discord.Member,*,message=None):
         if message == None :
             await ctx.send(f"📤**EMO'S OWNER** 💸 transferred **20000** coins to **{member.mention}** 💰\ncongrats 🎉")
         else :
-            embed = discord.Embed(title="EMO OWNER'S🌸",description=message,color=discord.blue())
+            embed = discord.Embed(title="EMO OWNER'S🌸",description=message,Color=discord.Color.blue())
             embed.set_footer(text="by emo dev's🌸")
             await ctx.send(embed=embed)
 
 
 
-print(f"bot commands : {bot.commands})
+print(f"bot commands : {bot.commands}")
 print(f"Bot has {len(bot.commands)} commands")
 
 import os
