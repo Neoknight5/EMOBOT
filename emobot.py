@@ -3293,12 +3293,27 @@ coins.add_wp(10,"wp10",500000,"https://images-ext-1.discordapp.net/external/VEhJ
 
 # _________________ADD COINS _________________
 @bot.command()
-async def text(ctx,*,message):
-    user = ctx.author.id
-    if user == 1463873853892857856 or user == 1486400095317659880:
-        embed = discord.Embed(title="EMO OWNER'S🌸",description=message,color=discord.Color.blue())
-        embed.set_footer(text="by emo dev's🌸")
-        await ctx.send(embed=embed)
+async def text(ctx, *, message):
+
+    try:
+
+        user = ctx.author.id
+
+        if user == 1463873853892857856 or user == 1486400095317659880:
+
+            embed = discord.Embed(
+                title="EMO OWNER'S🌸",
+                description=message,
+                color=discord.Color.blue()
+            )
+
+            embed.set_footer(text="by emo dev's🌸")
+
+            await ctx.send(embed=embed)
+
+    except Exception as e:
+        await ctx.send(f"Error: {e}")
+        print(e)
         
 
 @bot.command()
