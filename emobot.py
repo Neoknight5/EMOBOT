@@ -3329,4 +3329,4 @@ print(f"Bot has {len(bot.commands)} commands")
 
 import os
 
-bot.run(os.getenv("TOKEN"))
+bot.run(os.getenv("NEW_TOKEN"))
