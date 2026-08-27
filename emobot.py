@@ -3322,11 +3322,14 @@ async def add(ctx,val:int,member:discord.Member,*,message=None):
             embed.set_footer(text="by emo dev's🌸")
             await ctx.send(embed=embed)
 
+import os
+
 
 
 print(f"bot commands : {bot.commands}")
 print(f"Bot has {len(bot.commands)} commands")
 
-import os
-
-bot.run(os.getenv("NEW_TOKEN"))
+token =  osos.getenv("NEW_TOKEN")
+print("TOKEN:",NEW_TOKEN) 
+print("TOKEN EXISTS:",TOKEN is not None )
+bot.run(token)
