@@ -3330,6 +3330,6 @@ print(f"bot commands : {bot.commands}")
 print(f"Bot has {len(bot.commands)} commands")
 
 token = os.getenv("NEW_TOKEN")
-print("TOKEN:",NEW_TOKEN) 
-print("TOKEN EXISTS:",TOKEN is not None )
+print("TOKEN:",token) 
+print("TOKEN EXISTS:",token is not None )
 bot.run(token)
