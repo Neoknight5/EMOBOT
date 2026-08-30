@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import requests
 from PIL import Image  
 
-conn = sqlite3.connect("data.db")
+conn = sqlite3.connect("/data/data.db")
 conn.row_factory = sqlite3.Row  
 cursor = conn.cursor()
 
