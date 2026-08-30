@@ -1910,7 +1910,7 @@ async def on_command_error(ctx, error):
 
 
 GREETING_REPLIES = [
-    "😁hey i am emo", "🤗hello how are you", "(●'◡'●)hiiiiiii", "😁nice to meet you",
+    "😁hey i am emo","what is my hart doing ?","my love is saying hello","do you i love someone who just said hello ☺️","🤗hello how are you", "(●'◡'●)hiiiiiii", "😁nice to meet you",
     "☺️yoyo", "(❁´◡`❁)", "🥰love you", "😻you are my love", "♥️ hey good user",
     "^_~", "^_____^", "^0^ 😁", "( *︾▽︾)😁",
 ]
@@ -1950,7 +1950,7 @@ async def on_message(message):
 
     if text == "emo":
         await message.add_reaction("🌸")
-        await message.reply("you call me . 😘 me emo me here my pokkie >.<")
+        await message.reply("you call me . 😘 i am  here my pokkie >.<")
 
     if text == "owo":
         await message.reply("😤 owo is boring try emo bot 🥰 ")
@@ -1981,22 +1981,8 @@ async def on_message(message):
 
     if "hello" in text or "hey" in text :
         await message.add_reaction("👋")
-    if "love" in text or "i love you" in text:
-        await message.add_reaction("❤️")
-    if "happy" in text or "yay" in text:
-        await message.add_reaction("😁")
-    if "sad" in text or "cry" in text:
-        await message.add_reaction("🥺")
-    if "lol" in text or "lmao" in text or "haha" in text:
-        await message.add_reaction("😂")
-    if "wow" in text or "omg" in text:
-        await message.add_reaction("😲")
     if "cute" in text or "adorable" in text:
         await message.add_reaction("🥰")
-    if "thanks" in text or "thank you" in text:
-        await message.add_reaction("💖")
-    if "sorry" in text:
-        await message.add_reaction("🫂")
     if "good morning" in text or "morning" in text:
         await message.add_reaction("🌅")
     if "good night" in text or "gn" in text:
@@ -2005,8 +1991,6 @@ async def on_message(message):
         await message.add_reaction("💀")
     if "congrats" in text or "congratulations" in text:
         await message.add_reaction("🎉")
-    if "good luck" in text:
-        await message.add_reaction("🍀")
     if "bored" in text:
         await message.add_reaction("🥱")
 
